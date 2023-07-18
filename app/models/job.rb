@@ -1,3 +1,12 @@
 class Job < ApplicationRecord
-  enum type: [:full_time, :part_time, :contract, :temporary, :internship, :volunteer, :other]
+  enum job_type: {
+    full_time: "Full time", 
+    part_time: "Part time", 
+    contract: "Contract", 
+    temporary: "Temporary", 
+    internship: "Internship", 
+    volunteer: "Volunteer", 
+    other: "Other"
+  }
+  
 end
