@@ -5,3 +5,14 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+require "faker"
+
+Job.destroy_all
+
+JOBTYPE = %w(full_time part_time contract temporary internship volunteer other).freeze
+
+Job.create(title: Faker::Job.title, description: Faker::Job.field, location: Faker::Address.city, salary: Faker::Number.number(digits: 5), job_type: JOBTYPE.sample)
+Job.create(title: Faker::Job.title, description: Faker::Job.field, location: Faker::Address.city, salary: Faker::Number.number(digits: 5), job_type: JOBTYPE.sample)
+Job.create(title: Faker::Job.title, description: Faker::Job.field, location: Faker::Address.city, salary: Faker::Number.number(digits: 5), job_type: JOBTYPE.sample)
+
+puts "Created #{Job.count} jobs"
