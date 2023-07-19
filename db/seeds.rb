@@ -11,8 +11,8 @@ Job.destroy_all
 
 JOBTYPE = %w(full_time part_time contract temporary internship volunteer other).freeze
 
-Job.create(title: Faker::Job.title, description: Faker::Job.field, location: Faker::Address.city, salary: Faker::Number.number(digits: 5), job_type: JOBTYPE.sample)
-Job.create(title: Faker::Job.title, description: Faker::Job.field, location: Faker::Address.city, salary: Faker::Number.number(digits: 5), job_type: JOBTYPE.sample)
-Job.create(title: Faker::Job.title, description: Faker::Job.field, location: Faker::Address.city, salary: Faker::Number.number(digits: 5), job_type: JOBTYPE.sample)
+5.times do 
+  Job.create(title: Faker::Job.title, description: Faker::Job.field, location: Faker::Address.city, salary: Faker::Number.number(digits: 5), job_type: JOBTYPE.sample)
+end
 
 puts "Created #{Job.count} jobs"
