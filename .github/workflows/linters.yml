@@ -14,7 +14,6 @@ jobs:
       - uses: actions/setup-ruby@v1
         with:
           ruby-version: '3.2'
-          bundler-cache: true
       - name: Setup Rubocop
         run: |
           gem install --no-document rubocop -v '>= 1.0, < 2.0' # https://docs.rubocop.org/en/stable/installation/
