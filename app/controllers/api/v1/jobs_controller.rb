@@ -1,5 +1,5 @@
 class Api::V1::JobsController < ApplicationController
-  before_action :set_job, only: %i[ show update destroy ]
+  before_action :set_job, only: %i[show update destroy]
 
   # GET /jobs
   def index
@@ -39,13 +39,14 @@ class Api::V1::JobsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_job
-      @job = Job.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def job_params
-      params.require(:job).permit(:title, :description, :location, :salary, :type)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_job
+    @job = Job.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def job_params
+    params.require(:job).permit(:title, :description, :location, :salary, :type)
+  end
 end
