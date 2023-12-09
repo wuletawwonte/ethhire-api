@@ -1,5 +1,5 @@
 
-# Skill Minch API
+# EthHire API
 
 > This is a Ruby on Rails API-only application for a jobs portal. The API allows users to create job postings, browse available jobs, and apply for jobs.
 
@@ -9,8 +9,8 @@
 To get started with the application
 1. clone the repo and then install the needed gems:
 ```bash
-git clone git@github.com:wuletawwonte/skillminch-api.git
-cd skillminch-api
+git clone git@github.com:wuletawwonte/ethhire-api.git
+cd ethhire-api
 bundle install
 ```
 2. Next, migrate the database:
@@ -30,8 +30,8 @@ Here are the steps to setup the project locally using Docker and Docker compose.
 1. Install [Docker](https://docs.docker.com/engine/install/ubuntu/) and [Docker Compose](https://docs.docker.com/compose/install/linux/).
 2. Clone this repository navigate to the cloned directory
 ```bash
-git clone git@github.com:wuletawwonte/skillminch-api.git
-cd skillminch-api
+git clone git@github.com:wuletawwonte/ethhire-api.git
+cd ethhire-api
 ```
 3. Run docker-compose up.
 ```bash
