@@ -8,4 +8,6 @@ class Job < ApplicationRecord
     volunteer: 'Volunteer',
     other: 'Other'
   }
+
+  belongs_to :category
 end
