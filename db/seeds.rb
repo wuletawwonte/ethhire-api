@@ -8,11 +8,18 @@
 require "faker"
 
 Job.destroy_all
+Category.destroy_all
+
+3.times do 
+  Category.create(name: Faker::Job.field)
+end
+
+puts "Created #{Category.count} categories"
 
 JOBTYPE = %w(full_time part_time contract temporary internship volunteer other).freeze
 
 5.times do 
-  Job.create(title: Faker::Job.title, description: Faker::Job.field, location: Faker::Address.city, salary: Faker::Number.number(digits: 5), job_type: JOBTYPE.sample)
+  Job.create(title: Faker::Job.title, description: Faker::Job.field, location: Faker::Address.city, salary: Faker::Number.number(digits: 5), job_type: JOBTYPE.sample, category_id: Category.all.sample.id)
 end
 
 puts "Created #{Job.count} jobs"

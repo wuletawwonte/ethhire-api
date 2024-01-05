@@ -3,9 +3,9 @@ class Api::V1::JobsController < ApplicationController
 
   # GET /jobs
   def index
-    @jobs = Job.all
+    @jobs = Job.includes(:category).all
 
-    render json: @jobs
+    render json: @jobs, include: :category
   end
 
   # GET /jobs/1
