@@ -13,10 +13,10 @@ git clone git@github.com:wuletawwonte/ethhire-api.git
 cd ethhire-api
 bundle install
 ```
-2. Next, migrate the database:
+2. Next, migrate and seed the database:
 
 ```bash
-rails db:migrate
+rails db:migrate & rails db:seed
 ```
 3. Finally, start the server:
 
