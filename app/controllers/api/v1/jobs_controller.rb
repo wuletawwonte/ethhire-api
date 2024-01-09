@@ -1,4 +1,5 @@
 class Api::V1::JobsController < ApplicationController
+  skip_before_action :authenticate_devise_api_token!, only: %i[index]
   before_action :set_job, only: %i[show update destroy]
 
   # GET /jobs
