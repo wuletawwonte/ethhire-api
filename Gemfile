@@ -48,8 +48,8 @@ group :development do
   # gem "spring"
 end
 
-gem "devise", "~> 4.9"
+gem 'devise', '~> 4.9'
 
-gem "devise-jwt", "~> 0.11.0"
+gem 'devise-jwt', '~> 0.11.0'
 
-gem "jsonapi-serializer", "~> 2.2"
+gem 'jsonapi-serializer', '~> 2.2'
