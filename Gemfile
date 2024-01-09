@@ -47,3 +47,9 @@ group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
 end
+
+gem "devise", "~> 4.9"
+
+gem "devise-jwt", "~> 0.11.0"
+
+gem "jsonapi-serializer", "~> 2.2"
