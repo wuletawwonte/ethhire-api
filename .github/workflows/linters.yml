@@ -10,13 +10,14 @@ jobs:
     name: Rubocop
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-ruby@v1
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install Ruby and gems
+        uses: ruby/setup-ruby@55283cc23133118229fd3f97f9336ee23a179fcf # v1.146.0
         with:
-          ruby-version: 3.1.x
-      
-      - name: Install dependencies
-        run: bundle install --jobs 4 --retry 3
-        
+          bundler-cache: true
+
       - name: Standardrb check
         run: bundle exec standardrb
