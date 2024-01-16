@@ -48,6 +48,6 @@ class Api::V1::JobsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def job_params
-    params.require(:job).permit(:title, :description, :location, :salary, :type)
+    params.require(:job).permit(:title, :description, :location, :salary, :job_type, :category_id)
   end
 end

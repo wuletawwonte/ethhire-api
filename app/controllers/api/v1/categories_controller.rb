@@ -1,4 +1,5 @@
 class Api::V1::CategoriesController < ApplicationController
+  skip_before_action :authenticate_devise_api_token!, only: %i[create]
   before_action :set_category, only: %i[show update destroy]
 
   # GET /categories
