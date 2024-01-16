@@ -14,9 +14,5 @@ jobs:
       - uses: actions/setup-ruby@v1
         with:
           ruby-version: 3.1.x
-      - name: Setup Rubocop
-        run: |
-          gem install --no-document rubocop -v '>= 1.0, < 2.0' # https://docs.rubocop.org/en/stable/installation/
-          [ -f .rubocop.yml ]
-      - name: Rubocop Report
-        run: rubocop --color
+      - name: Standardrb check
+        run: bundle exec standardrb
