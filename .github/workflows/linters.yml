@@ -14,5 +14,9 @@ jobs:
       - uses: actions/setup-ruby@v1
         with:
           ruby-version: 3.1.x
+      
+      - name: Install dependencies
+        run: bundle install --jobs 4 --retry 3
+        
       - name: Standardrb check
         run: bundle exec standardrb
