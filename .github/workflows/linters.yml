@@ -1,4 +1,4 @@
-name: Linters
+name: CI
 
 on: pull_request
 
@@ -6,17 +6,45 @@ env:
   FORCE_COLOR: 1
 
 jobs:
-  rubocop:
-    name: Rubocop
+  test:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:11-alpine
+        ports:
+          - '5432:5432'
+        env:
+          POSTGRES_DB: rails_test
+          POSTGRES_USER: rails
+          POSTGRES_PASSWORD: password
+    env:
+      RAILS_ENV: test
+      DATABASE_URL: 'postgres://rails:password@localhost:5432/rails_test'
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install Ruby and gems
+        uses: ruby/setup-ruby@55283cc23133118229fd3f97f9336ee23a179fcf # v1.146.0
+        with:
+          bundler-cache: true
+
+      - name: Set up database schema
+        run: bin/rake db:schema:load
+
+      - name: Run tests
+        run: bin/rake
+
+  lint:
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-ruby@v1
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install Ruby and gems
+        uses: ruby/setup-ruby@55283cc23133118229fd3f97f9336ee23a179fcf # v1.146.0
         with:
-          ruby-version: 3.1.x
-      - name: Setup Rubocop
-        run: |
-          gem install --no-document rubocop -v '>= 1.0, < 2.0' # https://docs.rubocop.org/en/stable/installation/
-          [ -f .rubocop.yml ]
-      - name: Rubocop Report
-        run: rubocop --color
+          bundler-cache: true
+
+      - name: Standardrb check
+        run: bundle exec standardrb

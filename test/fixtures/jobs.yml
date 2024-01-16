@@ -26,11 +26,13 @@ one:
   description: MyText
   location: MyString
   salary: 9.99
-  type: 
+  job_type: JobTypeFulltime
+  category: one
 
 two:
   title: MyString
   description: MyText
   location: MyString
   salary: 9.99
-  type: 
+  job_type: JobTypePartime
+  category: one
