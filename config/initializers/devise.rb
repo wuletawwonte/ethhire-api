@@ -312,7 +312,6 @@ Devise.setup do |config|
   # config.sign_in_after_change_password = true
 
   config.api.configure do |api|
-    api.sign_up.enabled = true
     api.sign_up.extra_fields = ["first_name", "last_name"]
   end
 end
