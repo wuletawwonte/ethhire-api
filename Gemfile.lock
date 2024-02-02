@@ -1,3 +1,16 @@
+GIT
+  remote: https://github.com/nejdetkadir/devise-api.git
+  revision: f220683b3a0a55c39c08215b8be874125b09eaf1
+  branch: main
+  specs:
+    devise-api (0.1.3)
+      devise (>= 4.7.2)
+      dry-configurable (~> 1.0, >= 1.0.1)
+      dry-initializer (>= 3.1.1)
+      dry-monads (>= 1.6.0)
+      dry-types (>= 1.7.0)
+      rails (>= 6.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -98,13 +111,6 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
-    devise-api (0.1.3)
-      devise (>= 4.7.2)
-      dry-configurable (~> 1.0, >= 1.0.1)
-      dry-initializer (>= 3.1.1)
-      dry-monads (>= 1.6.0)
-      dry-types (>= 1.7.0)
-      rails (>= 6.0.0)
     drb (2.2.0)
       ruby2_keywords
     dry-configurable (1.1.0)
@@ -282,7 +288,7 @@ DEPENDENCIES
   bootsnap
   debug
   devise (~> 4.9)
-  devise-api (~> 0.1.3)
+  devise-api!
   faker (~> 3.2)
   pg (~> 1.5)
   puma (~> 6.4)
