@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/nejdetkadir/devise-api.git
-  revision: f220683b3a0a55c39c08215b8be874125b09eaf1
+  revision: 05ba4837c7689d9a57c94bd942d182fb0ee96e99
   branch: main
   specs:
     devise-api (0.1.3)
@@ -163,7 +163,7 @@ GEM
     minitest (5.21.2)
     msgpack (1.7.2)
     mutex_m (0.2.0)
-    net-imap (0.4.9.1)
+    net-imap (0.4.10)
       date
       net-protocol
     net-pop (0.1.2)
@@ -173,7 +173,7 @@ GEM
     net-smtp (0.4.0.1)
       net-protocol
     nio4r (2.7.0)
-    nokogiri (1.16.0-x86_64-linux)
+    nokogiri (1.16.2-x86_64-linux)
       racc (~> 1.4)
     orm_adapter (0.5.0)
     parallel (1.24.0)
@@ -186,7 +186,7 @@ GEM
     puma (6.4.2)
       nio4r (~> 2.0)
     racc (1.7.3)
-    rack (3.0.8)
+    rack (3.0.9)
     rack-cors (2.0.1)
       rack (>= 2.0.0)
     rack-session (2.0.0)
