@@ -53,4 +53,4 @@ gem "devise", "~> 4.9"
 
 gem "devise-api", github: "nejdetkadir/devise-api", branch: "main"
 
-gem "faker", "~> 3.2"
+gem "faker", "~> 3.3"
