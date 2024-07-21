@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "3.2.2"
+ruby "3.3.0"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.3"
@@ -40,7 +40,7 @@ group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[mri mingw x64_mingw]
 
-  gem "standard", "~> 1.34"
+  gem "standard", "~> 1.36"
 end
 
 group :development do
@@ -53,4 +53,4 @@ gem "devise", "~> 4.9"
 
 gem "devise-api", github: "nejdetkadir/devise-api", branch: "main"
 
-gem "faker", "~> 3.2"
+gem "faker", "~> 3.3"
